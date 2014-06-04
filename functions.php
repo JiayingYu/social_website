@@ -39,9 +39,9 @@ function sanitizeString($var) {
 
 function showProfile($user) {
     if (file_exists("$user.jpg"))
-        echo "<img src='$user'.jpg align='left' />";
+        echo "<img src='$user.jpg' align='left' />";
 
-    $result = queryMysql("SELECT * FROM profile WHERE USER='$user'");
+    $result = queryMysql("SELECT * FROM profiles WHERE USER='$user'");
 
     if(mysqli_num_rows($result)) {
         $row = mysqli_fetch_row($result);

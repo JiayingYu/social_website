@@ -40,7 +40,7 @@ for ($j = 0; $j <$num; ++$j) {
     $row = mysqli_fetch_row($result);
     if ($row[0] == $user) continue;
 
-    echo "<li><a href=\"members.php?view='$row[0]'\">$row</a>";
+    echo "<li><a href='members.php?view=$row[0]'>$row[0]</a>";
     $follow = "follow";
 
     $t1 = mysqli_num_rows(queryMysql("SELECT * FROM friends WHERE user='$row[0]' AND friend='$user'"));
@@ -54,7 +54,7 @@ for ($j = 0; $j <$num; ++$j) {
     }
 
     if (!$t1) echo " [<a href='members.php?add=" . $row[0] . "'>$follow</a>]";
-    else echo " [<a href='members.php?remove=" . $row[0] . "'>drop</a>";
+    else echo " [<a href='members.php?remove=" . $row[0] . "'>drop</a>]";
 }
 
 ?>

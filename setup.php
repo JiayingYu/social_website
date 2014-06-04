@@ -27,7 +27,7 @@ createTable('friends',
             INDEX(user(6)),
             INDEX(friend(6))');
 
-createTable('profile',
+createTable('profiles',
             'user VARCHAR(16),
             text  VARCHAR(4096),
             INDEX(user(6))');

@@ -14,7 +14,7 @@ if (isset($_POST['text'])) {
     else queryMysql("INSERT INTO profiles VALUES('$user', '$text')");
 }
 else {
-    $result = queryMysql("SELECT * FROM profile WHERE user='$user' ");
+    $result = queryMysql("SELECT * FROM profiles WHERE user='$user' ");
 
     if (mysqli_num_rows($result)) {
         $row = mysqli_fetch_row($result);

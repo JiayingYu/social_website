@@ -49,7 +49,7 @@ _END;
         $row = mysqli_fetch_row($result);
 
         if ($row[3] == 0 || $row[1] == $user || $row[2] == $user) {
-            echo date('M jS \'y g:ia:', $row[2] == $users);
+            echo date('M jS \'y g:ia:', $row[2] == $user);
             echo " <a href='messages.php?view=$row[1]'>$row[1]</a>";
 
             if ($row[3] == 0) echo "wrote: &quot;$row[5]&quot; ";
